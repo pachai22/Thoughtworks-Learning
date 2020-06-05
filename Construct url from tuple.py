@@ -1,8 +1,8 @@
 tup=("www","hackerrank","com","domains","python")
-str=""
+url=""
 for i in range(len(tup)):
     if i==1 or i==2 :
-        str=(str+"."+tup[i])
+        url=(url+"."+tup[i])
     else:
-        str=(str+"/"+tup[i])
-print(str)
+        url=(url+"/"+tup[i])
+print(url)
