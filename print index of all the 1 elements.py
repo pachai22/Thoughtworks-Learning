@@ -1,23 +1,23 @@
-l=[1,2,4,5,1,1,4,1,56]
+list1=[1,2,4,5,1,1,4,1,56]
 #Type 1
 
-ans=[]
-for i in range(len(l)):
-    if l[i]==1:
-        ans.append(i)
-print(ans)
+indices=[]
+for i in range(len(list1)):
+    if list1[i]==1:
+        indices.append(i)
+print(indices)
 
 #Type 2
 
-ans=[i for i in range(len(l)) if l[i]==1]
-print(ans)
+indices=[i for i in range(len(list1)) if list1[i]==1]
+print(indices)
 
 #Type 3
-ans=[index for index,value in enumerate(l) if value==1]
-print(ans)
+indices=[index for index,value in enumerate(list1) if value==1]
+print(indices)
 
 #Type 4
-ans=list(filter(lambda i : l[i]==1,range(len(l))))
-print(ans)
+indices=list(filter(lambda i : list1[i]==1,range(len(list1))))
+print(indices)
 
 
