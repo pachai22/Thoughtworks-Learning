@@ -6,7 +6,7 @@ desired_continent = input("Desired continent :")
 
 
 for key,value in given_dictionary.items():
-    if value == desired_continent:
+    if value.lower() == desired_continent.lower() :
         print(key,end=" ")
 
 
