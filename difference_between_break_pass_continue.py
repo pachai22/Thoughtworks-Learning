@@ -1,8 +1,8 @@
 # Break statement example
 
-N=int(input())
+number=int(input())
 print("Answer for break statement :",end=" ")
-for i in range(N):
+for i in range(number):
     if i==6:
         break
     print(i,end=" ")
@@ -14,7 +14,7 @@ print()
 # Continue statement example
 
 print("Answer for continue statement :",end=" ")
-for i in range(N):
+for i in range(number):
     if i==6:
         continue
     print(i,end=" ")
@@ -26,7 +26,7 @@ print()
 
 # Pass statement example
 
-if(N % 2 == 0):
+if(number % 2 == 0):
     pass                # Functionality can be added later
 else:
     print("N is odd")
