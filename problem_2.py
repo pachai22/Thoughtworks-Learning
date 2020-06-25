@@ -10,9 +10,9 @@ if len(string)==len(string1) :
     for i in range(len(string)):
         for j in range(len(string1)):
             if string[i]==string1[j]: 
-                string1[j]=" "
+                string1.pop(j)
                 break
-    if not " ".join(string1).isalpha():
+    if len(string1)==0:
         print("Anagram")
     else:
         print("Not an anagram")
