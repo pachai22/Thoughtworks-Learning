@@ -19,9 +19,9 @@ class planet():
 
 
 def largest_planet(*planets):
-    for i in planets:
-        if i.diameter == maxi:
-            print("The largest planet is "+i.name)
+    for planet in planets:
+        if planet.diameter == maxi:
+            print("The largest planet is "+planet.name)
 
 mercury = planet("Mercury",4879,0,"88 days")
 venus = planet("Venus",12100,0,"225 days")
