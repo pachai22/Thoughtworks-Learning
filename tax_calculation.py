@@ -25,7 +25,7 @@ class tax(product):
     def additional_tax(self):
         if self.category == "textile":
             self.extra_tax = (1/100)* self.price
-        elif self.category == "diary":
+        elif self.category == "diary" and self.price>=1000:
             self.extra_tax = (3/100)* self.price
         else:
             self.extra_tax = 0
@@ -39,10 +39,10 @@ def total(*object_names):
 
 
 milky_bar = tax(1,"Milky Bar",200,"diary")
-kitkat = tax(2,"Kitkat",150,"diary")
+kitkat = tax(2,"Kitkat",1500,"diary")
 saree = tax(3,"Saree",1000,"textile")
 chudi = tax(4,"Chudi",350,"textile")
-carrot = tax(5,"Carrot",160,"produce")
+carrot = tax(5,"Carrot",760,"produce")
 chilli = tax(6,"Chilli",60,"produce")
 toor_dhal = tax(7,"Toor_dhal",400,"homeneeds")
 urad_dhal = tax(8,"Urad dhal",600,"homeneeds")
