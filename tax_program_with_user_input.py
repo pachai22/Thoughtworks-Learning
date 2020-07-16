@@ -24,14 +24,14 @@ class tax(product):
     def additional_tax(self):
         if self.category == "textile":
             self.extra_tax = (1/100)* self.price
-        elif self.category == "diary":
+        elif self.category == "diary" and self.price >= 1000:
             self.extra_tax = (3/100)* self.price
         else:
             self.extra_tax = 0
         return self.extra_tax
 
 def total_tax(object_name):
-    print("The tax of the product",object_name.name,"is"+str(object_name.calculate_tax()+object_name.additional_tax()))
+    print("The tax of the product",object_name.name,"is "+str(object_name.calculate_tax()+object_name.additional_tax()))
     
         
 no_of_products = int(input("Enter the number of products :"))
@@ -89,14 +89,14 @@ homeneeds
 
 Output:
 
-The tax of the product milky is6.0
-The tax of the product kitkat is45.0
-The tax of the product saree is60.0
-The tax of the product chudi is10.5
-The tax of the product carrot is38.0
-The tax of the product chilli is1.2
-The tax of the product toordhal is8.0
-The tax of the product uraddhal is30.0
+The tax of the product milky is 0
+The tax of the product kitkat is 45.0
+The tax of the product saree is 60.0
+The tax of the product chudi is 10.5
+The tax of the product carrot is 38.0
+The tax of the product chilli is 1.2
+The tax of the product toordhal is 8.0
+The tax of the product uraddhal is 30.0
 
 """
     
