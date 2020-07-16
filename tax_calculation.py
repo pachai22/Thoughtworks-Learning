@@ -6,20 +6,20 @@ class product:
         self.price = price
         self.category = category
         self.extra_tax = 0
+        self.tax = 0
 
     def calculate_tax(self):
-        if self.price >=500:
-            self.tax = (5/100)*self.price
-        else:
-            self.tax = (2/100)*self.price
+        if self.category != "diary":
+            if self.price >=500:
+                self.tax = (5/100)*self.price
+            else:
+                self.tax = (2/100)*self.price
         return self.tax
     
 
             
 class tax(product):
-    tax = 0
     def __init__(self,id,name,price,category):
-        self.tax = 0
         super().__init__(id,name,price,category)
 
     def additional_tax(self):
@@ -52,11 +52,11 @@ total(milky_bar,kitkat,saree,chudi,carrot,chilli,toor_dhal,urad_dhal)
 """
 Output:
 
-The tax of the product Milky Bar  is  10.0 rupees
-The tax of the product Kitkat  is  7.5 rupees
+The tax of the product Milky Bar  is  0 rupees
+The tax of the product Kitkat  is  45.0 rupees
 The tax of the product Saree  is  60.0 rupees
 The tax of the product Chudi  is  10.5 rupees
-The tax of the product Carrot  is  3.2 rupees
+The tax of the product Carrot  is  38.0 rupees
 The tax of the product Chilli  is  1.2 rupees
 The tax of the product Toor_dhal  is  8.0 rupees
 The tax of the product Urad dhal  is  30.0 rupees
