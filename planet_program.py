@@ -1,5 +1,5 @@
 import re
-class planet():
+class Planet():
     def __init__(self,name,diameter,no_of_moons,length_of_year):
         length_of_year = re.split(r"\s",length_of_year)
         self.name = name
@@ -19,20 +19,21 @@ class planet():
 
 
 def largest_planet(*planets):
+    maxi=max(mercury.diameter,venus.diameter,earth.diameter,mars.diameter,jupiter.diameter,saturn.diameter,uranus.diameter,neptune.diameter)
     for planet in planets:
         if planet.diameter == maxi:
             print("The largest planet is "+planet.name)
 
-mercury = planet("Mercury",4879,0,"88 days")
-venus = planet("Venus",12100,0,"225 days")
-earth = planet("Earth",12755,1,"365 days")
-mars = planet("Mars",6786,2,"687 days")
-jupiter = planet("Jupiter",142800,79,"12 earth years")
-saturn = planet("Saturn",120537,82,"29.5 earth years")
-uranus = planet("Uranus",51619,27,"84 earth years")
-neptune = planet("Neptune",49529,14,"165 earth years")
+mercury = Planet("Mercury",4879,0,"88 days")
+venus = Planet("Venus",12100,0,"225 days")
+earth = Planet("Earth",12755,1,"365 days")
+mars = Planet("Mars",6786,2,"687 days")
+jupiter = Planet("Jupiter",142800,79,"12 earth years")
+saturn = Planet("Saturn",120537,82,"29.5 earth years")
+uranus = Planet("Uranus",51619,27,"84 earth years")
+neptune = Planet("Neptune",49529,14,"165 earth years")
 
-maxi=max(mercury.diameter,venus.diameter,earth.diameter,mars.diameter,jupiter.diameter,saturn.diameter,uranus.diameter,neptune.diameter)
+
 
 print(neptune.radius())
 print(jupiter.no_of_days())
