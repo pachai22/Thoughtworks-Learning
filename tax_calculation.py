@@ -1,4 +1,4 @@
-class product:
+class Product:
     extra_tax = 0
     def __init__(self,id,name,price,category):
         self.id = id
@@ -15,12 +15,6 @@ class product:
             else:
                 self.tax = (2/100)*self.price
         return self.tax
-    
-
-            
-class tax(product):
-    def __init__(self,id,name,price,category):
-        super().__init__(id,name,price,category)
 
     def additional_tax(self):
         if self.category == "textile":
@@ -38,14 +32,14 @@ def total(*object_names):
         
 
 
-milky_bar = tax(1,"Milky Bar",200,"diary")
-kitkat = tax(2,"Kitkat",1500,"diary")
-saree = tax(3,"Saree",1000,"textile")
-chudi = tax(4,"Chudi",350,"textile")
-carrot = tax(5,"Carrot",760,"produce")
-chilli = tax(6,"Chilli",60,"produce")
-toor_dhal = tax(7,"Toor_dhal",400,"homeneeds")
-urad_dhal = tax(8,"Urad dhal",600,"homeneeds")
+milky_bar = Product(1,"Milky Bar",200,"diary")
+kitkat = Product(2,"Kitkat",1500,"diary")
+saree = Product(3,"Saree",1000,"textile")
+chudi = Product(4,"Chudi",350,"textile")
+carrot = Product(5,"Carrot",760,"produce")
+chilli = Product(6,"Chilli",60,"produce")
+toor_dhal = Product(7,"Toor_dhal",400,"homeneeds")
+urad_dhal = Product(8,"Urad dhal",600,"homeneeds")
 
 total(milky_bar,kitkat,saree,chudi,carrot,chilli,toor_dhal,urad_dhal)
 
