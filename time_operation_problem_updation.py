@@ -1,4 +1,4 @@
-class time_operation():
+class TimeOperation():
     def __init__(self,hour,minute):
         self.hour=hour
         self.minute=minute
@@ -29,8 +29,8 @@ def total_minutes(time1_object,time2_object):
 
 time1 = input("1.Enter the hours and minutes separated by space : ").split()
 time2 = input("2.Enter the hours and minutes separated by space : ").split()
-time1_object = time_operation(int(time1[0]),int(time1[1]))
-time2_object = time_operation(int(time2[0]),int(time2[1]))
+time1_object = TimeOperation(int(time1[0]),int(time1[1]))
+time2_object = TimeOperation(int(time2[0]),int(time2[1]))
 print(add(time1_object,time2_object))
 print(difference(time1_object,time2_object))
 print(total_minutes(time1_object,time2_object))
