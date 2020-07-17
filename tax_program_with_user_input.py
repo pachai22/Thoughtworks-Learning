@@ -1,5 +1,5 @@
 
-class product:
+class Product:
     extra_tax = 0
     def __init__(self,id,name,price,category):
         self.id = id
@@ -10,21 +10,17 @@ class product:
         self.tax=0
 
     def calculate_tax(self):
-        if self.category != "diary":
+        if (self.category).lower() != "diary":
             if self.price >=500:
                 self.tax = (5/100)*self.price
             else:
                 self.tax = (2/100)*self.price
         return self.tax
-            
-class tax(product):
-    def __init__(self,id,name,price,category):
-        super().__init__(id,name,price,category)
 
     def additional_tax(self):
-        if self.category == "textile":
+        if (self.category).lower() == "textile":
             self.extra_tax = (1/100)* self.price
-        elif self.category == "diary" and self.price >= 1000:
+        elif (self.category).lower() == "diary" and self.price >= 1000:
             self.extra_tax = (3/100)* self.price
         else:
             self.extra_tax = 0
@@ -43,7 +39,7 @@ for i in range(no_of_products):
     name = input()
     price = int(input())
     category = input()
-    name = tax(id,name,price,category)
+    name = Product(id,name,price,category)
     objects.append(name)
     
 for i in range(len(objects)):
