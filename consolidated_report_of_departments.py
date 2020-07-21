@@ -35,3 +35,19 @@ department = input("Enter the department to print students list : ")
 fetch_students_list([ece,it,mechanical],department)
 department_name([ece,it,mechanical],department)
 
+"""
+Input and Output :
+
+The overlap subjects between departments are :  {'Python', 'Pom'}
+Enter the department to print students list : Ece
+The students in ECE  department :
+Pachai
+Dharani
+Paramu
+Niki
+
+Department list where student take more than 3 courses :  {'Mechanical', 'ECE'}
+
+
+"""
+
