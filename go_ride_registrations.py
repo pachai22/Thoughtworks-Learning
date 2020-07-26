@@ -49,11 +49,13 @@ registration()
 Input and output :
 
 Welcome to GoRide !
-Do you want to  register as driver or owner ?
-select driver/owner :owner
-Select car category as micro- can accomodate upto 4 people / XL- can accomodate upto 10 people
-Enter your car category : XL
-Enter your car number : TN 01 PA 1234
+Enter your name : Pachai
+Enter your age : 20
+Enter your driving license number : AB2320001234567
+Enter your license validity (dd-mm-yyyy) : 12-12-2022
+Select car category as micro- can accomodate upto 4 people / XL- can accomodate upto 10 people 
+Enter your car category : micro
+Enter your car number : TN 01 23 4567
 Enter your car colour : green
 Enter your car company : honda
 Enter your car model : city
