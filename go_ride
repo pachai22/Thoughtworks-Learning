@@ -1,0 +1,52 @@
+create schema Registration;
+
+set search_path to Registration;
+
+create table Drivers(
+	
+	id numeric primary key,
+	name text not null,
+	age numeric not null check(age>22),
+	license_number varchar not null unique check(license_number ~ '[A-Z]{2}[0-9]{2}((19|20)[0-9][0-9])[0-9]{7}$'),
+	validity_period date not null
+	
+	);
+
+create table Cars(
+	
+	driver_id numeric references Drivers(id),
+	category text not null,
+	car_number varchar primary key,
+	colour text not null,
+	company text not null,
+	model text not null
+);
+create schema Booking;
+
+set search_path to Booking
+
+create table Vehicles(
+	
+	id serial primary key,
+	category text not null,
+	min_range numeric not null,
+	max_range numeric not null,
+	price varchar not null,
+	is_price_with_ac text not null
+	
+);
+
+Sample data for Vehicle table :
+
+insert into vehicles values ("auto",0,15,10,"yes"),
+			    ("auto",16,30,8,"yes"),
+			    ("auto",31,1000,15,"yes"),
+			    ("micro",0,15,12,"yes"),
+			    ("micro",16,1000,10,"yes"),
+			    ("micro",0,15,14,"no"),
+			    ("micro",16,1000,12,"no"),
+			    ("xl",[0,15],14,"yes")
+                           ("xl",16,1000,14,"yes"),
+                           ("xl",0,15,15,"no"),
+                           ("xl",16,1000,15,"no");
+
