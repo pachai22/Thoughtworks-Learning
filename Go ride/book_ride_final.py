@@ -74,7 +74,7 @@ def display_price(filtered_categories,with_ac_or_not):
                 print(option.get_range(),":",option.get_price())
     else:
         for option in filtered_categories:
-            if option.with_ac == "no":
+            if option.is_with_ac() == "no":
                 print(option.get_range(),":",option.get_price())
     print("Thanks for riding with us!")
         
