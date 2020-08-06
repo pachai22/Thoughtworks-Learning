@@ -27,6 +27,28 @@ def insert_book():
     session.commit()
     return "Data added successfully"
 
+@app.route('/update',methods=['PUT'])
+def update_book():
+    book_name = request.form['bookname']
+    book_price = request.form['bookprice']
+    updated_book = session.query(BookWorld).filter_by(bookname= book_name).one()
+    updated_book.bookname = book_name
+    updated_book.bookprice = book_price
+    session.add(updated_book)
+    session.commit()
+    return "Data updated successfully"
+
+@app.route('/delete',methods=['DELETE'])
+def delete_book():
+    book_name = request.form['bookname']
+    delete_book = session.query(BookWorld).filter_by(bookname=book_name).one()
+    session.delete(delete_book)
+    session.commit()
+    return "Book deleted successfully"
+
+
+
+
 db = connect_db()
 Session = sessionmaker(bind=db)
 session = Session()
